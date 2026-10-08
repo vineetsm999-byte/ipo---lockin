@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IPO Lock-in Sheet</title>
+<style>
+:root{--bg:#ffffff;--panel:#f4f5f7;--text:#14171c;--dim:#5a6372;--line:#dde1e7;--accent:#1f5fbf;--urgent:#c0392b;--soon:#a8680f;--done:#9aa2ae;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1115;--panel:#181b21;--text:#e8eaed;--dim:#98a0ad;--line:#2a2f38;--accent:#6aa3ff;--urgent:#ff6b5e;--soon:#e3a63e;--done:#5d6471}}
+:root[data-theme="dark"]{--bg:#0f1115;--panel:#181b21;--text:#e8eaed;--dim:#98a0ad;--line:#2a2f38;--accent:#6aa3ff;--urgent:#ff6b5e;--soon:#e3a63e;--done:#5d6471}
+*{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:18px 16px 40px}
+h1{margin:0 0 2px;font-size:20px}
+.sub{color:var(--dim);font-size:13px;margin-bottom:12px}
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 0;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+nav.top a{border:1px solid var(--line);background:var(--panel);color:var(--text);padding:6px 12px;border-radius:6px;text-decoration:none;font-size:13px;font-weight:600}
+nav.top a:hover{border-color:var(--accent)}
+nav.top b{color:var(--accent);margin-left:4px}
+.sp{flex:1}
+.srch{background:var(--panel);border:1px solid var(--line);color:var(--text);padding:7px 10px;border-radius:6px;font-size:13px;width:180px}
+.chk{font-size:13px;color:var(--dim);display:flex;align-items:center;gap:6px;white-space:nowrap}
+section{margin-top:24px}
+h2{font-size:16px;margin:0 0 8px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.cnt{color:var(--dim);font-size:12px;font-weight:400}
+button.act{border:1px solid var(--line);background:transparent;color:var(--text);padding:7px 12px;border-radius:6px;cursor:pointer;font-size:13px}
+button.act:hover{border-color:var(--accent)}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;min-width:720px}
+th{background:var(--panel);text-align:left;font-size:12px;letter-spacing:.3px;padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:9px 12px;border-bottom:1px solid var(--line);white-space:nowrap;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:none}
+td.n{white-space:normal;min-width:200px;font-weight:600}
+td.q,th.q{text-align:right}
+.d.done{color:var(--done);text-decoration:line-through}
+.d.urgent{color:var(--urgent);font-weight:700}
+.d.soon{color:var(--soon);font-weight:600}
+.empty{padding:30px 12px;text-align:center;color:var(--dim);display:none}
+.leg{color:var(--dim);font-size:12px;margin-top:18px}
+.box{border:1px solid var(--line);border-radius:8px;padding:12px;background:var(--panel)}
+textarea{width:100%;height:130px;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:8px;font:12px/1.4 ui-monospace,Menlo,Consolas,monospace}
+.row{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.hint{color:var(--dim);font-size:12px;margin-top:8px}
+th.s{cursor:pointer;user-select:none}
+th.s:hover{color:var(--accent)}
+.ar{color:var(--dim);font-size:11px;margin-left:2px}
+tr.f th{background:var(--bg);padding:6px 8px;font-weight:400;vertical-align:top}
+.fr{display:flex;flex-direction:column;gap:4px}
+.fr label{font-size:11px;color:var(--dim);display:flex;align-items:center;gap:4px;justify-content:space-between}
+.fi{width:100%;min-width:0;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:4px;padding:4px 6px;font-size:12px;font-family:inherit;color-scheme:light dark}
+.fr label .fi{width:auto;flex:1}
+.top-link{display:inline-block;margin-top:20px;color:var(--accent);font-size:13px;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+<h1>IPO Lock-in Sheet</h1>
+<div class="sub">Anchor lock-in: 50% shares unlock after 30 days, remaining 50% after 90 days from allotment &middot; Data: Chittorgarh &middot; auto-updated every evening &middot; <span id="asof">loading&hellip;</span></div>
+
+<nav class="top">
+<a href="#sMainboard">Mainboard <b id="cMainboard"></b></a>
+<a href="#sSME">SME <b id="cSME"></b></a>
+<a href="#sAdd">Add / correct row</a>
+<span class="sp"></span>
+<input class="srch" id="q" type="text" placeholder="Search company…">
+<label class="chk"><input type="checkbox" id="upc"> Hide fully unlocked</label>
+</nav>
+
+<section id="sMainboard">
+<h2>Mainboard IPOs <span class="cnt" id="statMainboard"></span><span class="sp"></span><button class="act" data-clear="Mainboard">Clear filters</button><button class="act" data-copy="Mainboard">Copy table</button></h2>
+<div class="tw"><div id="tblMainboard"></div><div class="empty" id="emptyMainboard">No rows.</div></div>
+</section>
+
+<section id="sSME">
+<h2>SME IPOs <span class="cnt" id="statSME"></span><span class="sp"></span><button class="act" data-clear="SME">Clear filters</button><button class="act" data-copy="SME">Copy table</button></h2>
+<div class="tw"><div id="tblSME"></div><div class="empty" id="emptySME">No rows.</div></div>
+</section>
+
+<div class="leg">Red = unlocks within 7 days &middot; Amber = within 30 days &middot; Struck grey = already unlocked</div>
+
+<section id="sAdd">
+<h2>Add / correct a row by hand</h2>
+<div class="box">
+<textarea id="csv" placeholder="Type,Listing Date,Name,1M Date,1M Qty,3M Date,3M Qty&#10;Mainboard,2026-09-04,ESDS Software Solution Ltd.,2026-10-02,2517482,2026-12-01,2517482"></textarea>
+<div class="row">
+<button class="act" id="mergeBtn">Merge into sheet</button>
+<button class="act" id="resetBtn">Remove my manual rows</button>
+</div>
+<div class="hint">The data above updates by itself every evening. Use this box only to add or correct a row by hand: paste CSV rows (header row required). A manual row replaces the automatic one with the same type + name, and stays saved in this browser only.</div>
+</div>
+</section>
+<a class="top-link" href="#top">&uarr; Back to top</a>
+</div>
+
+<script type="text/plain" id="seedcsv">
+Type,Listing Date,Name,1M Date,1M Qty,3M Date,3M Qty
+SME,2026-10-08,EverestIMS Technologies Ltd.,2026-11-05,806400,2027-01-04,806400
+SME,2026-10-08,Shree TNB Polymers Ltd.,2026-11-04,853000,2027-01-03,853000
+SME,2026-10-07,Vans Electroengineerings Ltd.,2026-11-03,402000,2027-01-02,402000
+SME,2026-10-07,Black Opal Consultants Ltd.,2026-11-04,398100,2027-01-04,398100
+Mainboard,2026-10-06,SRIT India Ltd.,2026-10-30,2520000,2026-12-29,2520000
+Mainboard,2026-10-06,Shah Investor's Home Ltd.,2026-10-30,809880,2026-12-29,809880
+SME,2026-10-06,Acme Universal Safezone 9 Ltd.,2026-11-01,719200,2026-12-31,719200
+Mainboard,2026-10-05,Orient Cables (India) Ltd.,2026-10-29,3044117,2026-12-28,3044116
+Mainboard,2026-10-05,Runwal Enterprises Ltd.,2026-10-29,2441803,2026-12-28,2441802
+SME,2026-10-05,Sai Urja Indo Ventures Ltd.,2026-10-31,293400,2026-12-30,293400
+Mainboard,2026-10-05,Acevector Ltd.,2026-10-29,29531250,2026-12-28,29531250
+SME,2026-10-05,Bench Mark Infotech Services Ltd.,2026-10-29,548400,2026-12-28,548400
+SME,2026-10-05,Himalayan Solar Ltd.,2026-10-30,376200,2026-12-29,376200
+Mainboard,2026-10-05,German Green Steel & Power Ltd.,2026-10-29,3279496,2026-12-28,3279495
+Mainboard,2026-10-01,A-One Steels India Ltd.,2026-10-28,1492580,2026-12-27,1492580
+Mainboard,2026-10-01,Moneyview Ltd.,2026-10-28,48162365,2026-12-27,48162364
+SME,2026-10-01,Roopa Screen Ltd.,2026-10-28,416000,2026-12-27,416000
+Mainboard,2026-09-30,Elevate Campuses Ltd.,2026-10-27,13052486,2026-12-26,13052486
+SME,2026-09-30,Pooja Logistics Ltd.,2026-10-28,531000,2026-12-27,531000
+SME,2026-09-30,S.K.Offset Ltd.,2026-10-29,270000,2026-12-28,270000
+Mainboard,2026-09-30,Swastika Infra Ltd.,2026-10-27,1304391,2026-12-26,1304391
+SME,2026-09-30,Unitec Fibres Ltd.,2026-10-28,553600,2026-12-27,553600
+Mainboard,2026-09-30,ArMee Infotech Ltd.,2026-10-28,532500,2026-12-27,532500
+Mainboard,2026-09-30,Adroit Industries (India) Ltd.,2026-10-27,1687050,2026-12-26,1687050
+SME,2026-09-29,Himalaya Nutravedics India Ltd.,2026-10-24,355200,2026-12-23,355200
+Mainboard,2026-09-29,Varmora Granito Ltd.,2026-10-24,7175888,2026-12-23,7175887
+SME,2026-09-28,Robokidz Eduventures Ltd.,2026-10-25,414000,2026-12-24,414000
+SME,2026-09-28,FX Multitech Ltd.,2026-10-23,551400,2026-12-23,551400
+SME,2026-09-28,Vivekanand Cotspin Ltd.,2026-10-24,850500,2026-12-24,850500
+SME,2026-09-25,Axiom Gas Engineering Ltd.,2026-10-23,535000,2026-12-22,535000
+Mainboard,2026-09-24,National Stock Exchange of India Ltd.,2026-10-21,18896870,2026-12-20,18896869
+SME,2026-09-24,SpectraA Technology Solutions Ltd.,2026-10-22,512400,2026-12-21,512400
+SME,2026-09-24,Kheria Autocomp Ltd.,2026-10-22,655200,2026-12-21,655200
+Mainboard,2026-09-24,Sonaselection India Ltd.,2026-10-21,2145000,2026-12-20,2145000
+Mainboard,2026-09-23,SS Retail Ltd.,2026-10-20,1726415,2026-12-19,1726414
+Mainboard,2026-09-23,Hero Motors Ltd.,2026-10-20,17857142,2026-12-19,17857142
+Mainboard,2026-09-23,Jindal Supreme (India) Ltd.,2026-10-20,2014200,2026-12-19,2014200
+SME,2026-09-22,Shakti Polytarp Ltd.,2026-10-18,411000,2026-12-17,411000
+Mainboard,2026-09-21,Manika Plastech Ltd.,2026-10-17,4377907,2026-12-16,4377906
+SME,2026-09-21,Century Business Media Ltd.,2026-10-17,327200,2026-12-16,327200
+SME,2026-09-21,Injecto Polymers Ltd.,2026-10-17,478800,2026-12-16,478800
+Mainboard,2026-09-18,Veegaland Developers Ltd.,2026-10-16,2250000,2026-12-15,2250000
+SME,2026-09-18,Om Galaxy Ltd.,2026-10-16,1660800,2026-12-15,1660800
+SME,2026-09-18,Maharaja & Speedex India Ltd.,2026-10-17,613500,2026-12-16,613500
+SME,2026-09-18,Raksan Transformers Ltd.,2026-10-16,785000,2026-12-15,785000
+Mainboard,2026-09-17,LCC Projects Ltd.,2026-10-15,4388435,2026-12-14,4388434
+Mainboard,2026-09-17,Steamhouse India Ltd.,2026-10-14,7666666,2026-12-13,7666666
+Mainboard,2026-09-17,Rentomojo Ltd.,2026-10-14,4654334,2026-12-13,4654333
+SME,2026-09-17,Amtech Esters Ltd.,2026-10-15,338400,2026-12-14,338400
+Mainboard,2026-09-17,Karamtara Engineering Ltd.,2026-10-14,5167322,2026-12-13,5167322
+Mainboard,2026-09-17,Asset Reconstruction Co.(India) Ltd.,2026-10-14,7909792,2026-12-13,7909791
+Mainboard,2026-09-17,Manipal Payment & Identity Solutions Ltd.,2026-10-15,5342921,2026-12-14,5342920
+Mainboard,2026-09-16,Glass Wall Systems (India) Ltd.,2026-10-10,3526564,2026-12-09,3526563
+Mainboard,2026-09-16,Kanohar Electricals Ltd.,2026-10-10,2505712,2026-12-09,2505712
+Mainboard,2026-09-16,Prasol Chemicals Ltd.,2026-10-10,1109465,2026-12-09,1109465
+Mainboard,2026-09-15,Pranav Constructions Ltd.,2026-10-10,3397017,2026-12-09,3397017
+SME,2026-09-11,Qualiance International Ltd.,2026-10-08,504500,2026-12-07,504500
+Mainboard,2026-09-08,Deepa Jewellers Ltd.,2026-10-03,3895895,2026-12-02,3895894
+Mainboard,2026-09-08,Rays of Belief Ltd.,2026-10-03,1046095,2026-12-02,1046095
+Mainboard,2026-09-07,Purple Style Labs Ltd.,2026-10-02,2660870,2026-12-01,2660869
+SME,2026-09-07,Ashutosh Fibre Ltd.,2026-10-03,871800,2026-12-02,871800
+SME,2026-09-07,Phychem Technologies Ltd.,2026-10-03,381000,2026-12-02,381000
+SME,2026-09-07,Shanti Inorganics Ltd.,2026-10-03,809600,2026-12-02,809600
+Mainboard,2026-09-04,ESDS Software Solution Ltd.,2026-10-02,2517482,2026-12-01,2517482
+SME,2026-09-04,Complete Sports & Management India Ltd.,2026-10-01,789500,2026-11-30,789500
+SME,2026-09-04,Paluck Technologies Ltd.,2026-10-01,978000,2026-11-30,978000
+Mainboard,2026-09-04,Priority Jewels Ltd.,2026-10-02,686250,2026-12-01,686250
+Mainboard,2026-09-03,Lumino Industries Ltd.,2026-10-01,12621951,2026-11-30,12621950
+SME,2026-09-03,Kwick Forensic Solutions Ltd.,2026-09-30,801600,2026-11-29,801600
+SME,2026-09-02,Sumax Engineering Ltd.,2026-09-30,717600,2026-11-29,717600
+Mainboard,2026-09-01,Hy-Tech Engineers Ltd.,2026-09-26,3841530,2026-11-25,3841530
+SME,2026-09-01,Madhur Knit Crafts Ltd.,2026-09-27,151200,2026-11-26,151200
+Mainboard,2026-09-01,Skyways Air Services Ltd.,2026-09-26,6324000,2026-11-25,6324000
+Mainboard,2026-09-01,Symbiotec Pharmalab Ltd.,2026-09-26,2662955,2026-11-25,2662954
+Mainboard,2026-08-31,Augmont Enterprises Ltd.,2026-09-25,1562817,2026-11-24,1562816
+Mainboard,2026-08-28,Tempsens Instruments (India) Ltd.,2026-09-23,3242500,2026-11-22,3242499
+Mainboard,2026-08-26,Gaja Alternative Asset Management Ltd.,2026-09-22,5156250,2026-11-21,5156250
+Mainboard,2026-08-25,Sunshine Pictures Ltd.,2026-09-19,1175570,2026-11-18,1175570
+Mainboard,2026-08-25,Shankesh Jewellers Ltd.,2026-09-19,5922300,2026-11-18,5922300
+Mainboard,2026-08-24,Horizon Industrial Parks Ltd.,2026-09-18,97312500,2026-11-17,97312500
+Mainboard,2026-08-24,Lalithaa Jewellery Mart Ltd.,2026-09-18,12641791,2026-11-17,12641790
+SME,2026-08-21,Technocrats Plasma Systems Ltd.,2026-09-18,657000,2026-11-17,657000
+SME,2026-08-21,ENS Enterprises Ltd.,2026-09-18,513000,2026-11-18,513000
+SME,2026-08-20,Credent Connect N Care Ltd.,2026-09-17,702000,2026-11-16,702000
+Mainboard,2026-08-19,Shiprocket Ltd.,2026-09-15,37495784,2026-11-14,37495784
+SME,2026-08-19,Pramodini Medicare Ltd.,2026-09-16,680400,2026-11-15,680400
+Mainboard,2026-08-19,Behari Lal Engineering Ltd.,2026-09-15,1587473,2026-11-14,1587473
+Mainboard,2026-08-18,Milky Mist Dairy Food Ltd.,2026-09-12,16617857,2026-11-11,16617856
+Mainboard,2026-08-17,Molbio Diagnostics Ltd.,2026-09-11,1743859,2026-11-10,1743858
+Mainboard,2026-08-17,Dhoot Transmission Ltd.,2026-09-11,5271329,2026-11-10,5271328
+SME,2026-08-14,Optimystix Entertainment India Ltd.,2026-09-11,835200,2026-11-10,835200
+Mainboard,2026-08-14,Technocraft Ventures Ltd.,2026-09-10,1781905,2026-11-09,1781905
+Mainboard,2026-08-14,LEAP India Ltd.,2026-09-10,23384427,2026-11-09,23384427
+SME,2026-08-13,LAPL Automotive Ltd.,2026-09-12,488400,2026-11-11,488400
+Mainboard,2026-08-12,Ardee Industries Ltd.,2026-09-08,12052792,2026-11-07,12052792
+SME,2026-08-12,G.V.Electricals Ltd.,2026-09-13,444000,2026-11-11,444000
+SME,2026-08-11,Aegeus Technologies Ltd.,2026-09-06,286200,2026-11-05,286200
+SME,2026-08-10,Anawil Wire & Engineering Ltd.,2026-09-05,937800,2026-11-04,937800
+SME,2026-08-07,Fusion Klassroom Edutech Ltd.,2026-09-05,348400,2026-11-04,348400
+SME,2026-08-06,Oneindig Technologies Ltd.,2026-09-03,408000,2026-11-02,408000
+SME,2026-08-06,Dhaval Packaging Ltd.,2026-09-02,515400,2026-11-01,515400
+Mainboard,2026-08-06,MV Electrosystems Ltd.,2026-09-02,1535294,2026-11-01,1535293
+Mainboard,2026-08-06,Juniper Green Energy Ltd.,2026-09-02,11986667,2026-11-01,11986666
+SME,2026-08-05,H.R.Hygiene Products Ltd.,2026-09-02,843200,2026-11-01,843200
+Mainboard,2026-08-05,Manipal Health Enterprises Ltd.,2026-09-01,35314384,2026-10-31,35314384
+SME,2026-08-04,Poojaa Precision Engg.Ltd.,2026-08-29,749800,2026-10-28,749800
+SME,2026-07-31,Silverstorm Parks & Resorts Ltd.,2026-08-28,826000,2026-10-27,826000
+Mainboard,2026-07-30,Indo-MIM Ltd.,2026-08-26,11762828,2026-10-25,11762828
+Mainboard,2026-07-30,Lohia Corp Ltd.,2026-08-26,5789567,2026-10-25,5789566
+Mainboard,2026-07-30,Xtranet Technologies Ltd.,2026-08-28,1970100,2026-10-25,1970100
+SME,2026-07-29,Shree Balaji (Mala) Textiles Ltd.,2026-08-25,382000,2026-10-25,382000
+SME,2026-07-28,Metalic Technoforge Ltd.,2026-08-23,920000,2026-10-22,920000
+Mainboard,2026-07-24,Caliber Mining & Logistics Ltd.,2026-08-21,1591981,2026-10-20,1591980
+SME,2026-07-23,Sotefin Bharat Ltd.,2026-08-20,684000,2026-10-19,684000
+SME,2026-07-21,Millworks Technologies Ltd.,2026-08-16,662600,2026-10-15,662600
+Mainboard,2026-07-21,SBI Funds Management Ltd.,2026-08-16,23196548,2026-10-15,23196547
+SME,2026-07-16,Devson Catalyst Ltd.,2026-08-13,500400,2026-10-12,500400
+Mainboard,2026-07-16,Laser Power & Infra Ltd.,2026-08-13,5200934,2026-10-12,5200933
+SME,2026-07-16,Happy Steels Ltd.,2026-08-13,538000,2026-10-12,538000
+Mainboard,2026-07-15,Kusumgar Ltd.,2026-08-12,2314439,2026-10-10,2314438
+SME,2026-07-10,IC Electricals Co.Ltd.,2026-08-07,684000,2026-10-06,684000
+Mainboard,2026-07-08,Knack Packaging Ltd.,2026-08-04,3860294,2026-10-03,3860293
+SME,2026-07-07,Sampark India Logistics Ltd.,2026-08-02,459200,2026-10-01,459200
+SME,2026-07-07,Kratikal Tech Ltd.,2026-08-02,415500,2026-10-01,415500
+SME,2026-07-07,Atharva Polyplast Ltd.,2026-08-02,637000,2026-10-01,637000
+Mainboard,2026-07-02,CSM Technologies Ltd.,2026-07-30,885060,2026-09-28,885060
+Mainboard,2026-07-01,Advit Jewels Ltd.,2026-07-29,1794350,2026-09-27,1794350
+SME,2026-07-01,Shreedhar Spinners Ltd.,2026-07-28,809000,2026-09-26,809000
+Mainboard,2026-07-01,Waterways Leisure Tourism Ltd.,2026-07-28,1629023,2026-09-26,1629022
+Mainboard,2026-06-29,Turtlemint Fintech Solutions Ltd.,2026-07-23,13065840,2026-09-21,13065840
+SME,2026-06-29,Anubhav Plast Ltd.,2026-07-23,424000,2026-09-21,424000
+SME,2026-06-25,Avience Biomedicals Ltd.,2026-07-23,204900,2026-09-21,204900
+SME,2026-06-24,Clay Craft India Ltd.,2026-07-22,771900,2026-09-20,771900
+SME,2026-06-19,Horizon Reclaim (India) Ltd.,2026-07-16,750600,2026-09-14,750600
+SME,2026-06-18,Susan Electricals India Ltd.,2026-07-16,761500,2026-09-14,761500
+Mainboard,2026-06-12,Hexagon Nutrition Ltd.,2026-07-09,4628848,2026-09-07,4628848
+SME,2026-06-12,Genxai Analytics Ltd.,2026-07-09,646200,2026-09-07,646200
+Mainboard,2026-06-10,CMR Green Technologies Ltd.,2026-07-07,4907197,2026-09-05,4907196
+SME,2026-06-08,Merritronix Ltd.,2026-07-03,668000,2026-09-01,668000
+SME,2026-06-03,Rajnandini Fashion India Ltd.,2026-06-30,409000,2026-08-29,409000
+SME,2026-06-01,M R Maniveni Foods Ltd.,2026-06-25,735000,2026-08-24,735000
+SME,2026-05-29,Q-Line Biotech Ltd.,2026-06-25,890600,2026-08-24,890600
+SME,2026-05-27,Vegorama Punjabi Angithi Ltd.,2026-06-23,708000,2026-08-22,708000
+SME,2026-05-26,Teamtech Formwork Solutions Ltd.,2026-06-21,1133000,2026-08-20,1133000
+SME,2026-05-19,Goldline Pharmaceutical Ltd.,2026-06-14,366000,2026-08-13,366000
+SME,2026-05-15,Simca Advertising Ltd.,2026-06-12,219600,2026-08-11,219600
+SME,2026-05-12,Recode Studios Ltd.,2026-06-07,400800,2026-08-06,400800
+Mainboard,2026-05-08,OnEMI Technology Solutions Ltd.,2026-06-04,8122108,2026-08-03,8122108
+SME,,Acme India Industries Ltd.,2026-11-06,882900,2027-01-05,882900
+SME,,TNA Solutions Ltd.,2026-11-06,768000,2027-01-05,768000
+</script>
+<script>
+(function(){
+var KEY='lockin-manual-v1',data=[],manual=[],base='',loaded=false,TYPES=['Mainboard','SME'];
+var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function $(id){return document.getElementById(id)}
+function seedText(){return $('seedcsv').textContent.trim()}
+function loadManual(){try{var r=localStorage.getItem(KEY);if(r)manual=JSON.parse(r)}catch(e){}}
+function put(list,o){list=list.filter(function(x){return !(x.type==o.type&&x.name==o.name)});list.push(o);return list}
+function rebuild(){data=[];parseRows(base,true).forEach(function(o){data=put(data,o)});manual.forEach(function(o){data=put(data,o)});
+var m='';data.forEach(function(x){if(x.listing>m)m=x.listing});$('asof').textContent='latest listing in data: '+fmt(m)+' \u00b7 '+data.length+' IPOs'}
+function load(){loadManual();
+var done=function(t){base=t;loaded=true;rebuild();render()};
+fetch('lockin_data.csv?t='+Date.now()).then(function(r){if(!r.ok)throw 0;return r.text()}).then(done).catch(function(){done(seedText())})}
+function saveManual(){try{localStorage.setItem(KEY,JSON.stringify(manual))}catch(e){}}
+function num(v){var n=Math.round(parseFloat(String(v).replace(/,/g,'')));return isNaN(n)?0:n}
+function iso(s){var m=String(s||'').match(/(\d{4})-(\d{2})-(\d{2})/);return m?m[0]:''}
+function fmt(s){if(!s)return '-';var p=s.split('-');return p[2]+'-'+MON[+p[1]-1]+'-'+p[0]}
+function qty(n){return (n||n===0)?Number(n).toLocaleString('en-IN'):'-'}
+function days(s){var t=new Date();t.setHours(0,0,0,0);var p=s.split('-');var d=new Date(+p[0],+p[1]-1,+p[2]);return Math.round((d-t)/864e5)}
+function cls(s){if(!s)return '';var n=days(s);return n<0?'done':n<=7?'urgent':n<=30?'soon':''}
+function parseCSV(t){var rows=[],row=[],c='',q=false,i,ch;
+for(i=0;i<t.length;i++){ch=t[i];
+if(q){if(ch=='"'){if(t[i+1]=='"'){c+='"';i++}else q=false}else c+=ch}
+else if(ch=='"')q=true;
+else if(ch==','){row.push(c);c=''}
+else if(ch=='\n'||ch=='\r'){if(ch=='\r'&&t[i+1]=='\n')i++;row.push(c);c='';rows.push(row);row=[]}
+else c+=ch}
+if(c.length||row.length){row.push(c);rows.push(row)}
+return rows.filter(function(r){return r.join('').trim()})}
+function parseRows(text,quiet){
+var rows=parseCSV(text);if(rows.length<2){if(!quiet)alert('Header row + at least one data row needed.');return []}
+var h=rows[0].map(function(x){return x.trim().toLowerCase()});
+function ix(){for(var a=0;a<arguments.length;a++){var k=h.indexOf(arguments[a]);if(k>-1)return k}return -1}
+var iT=ix('type'),iL=ix('listing date','listing'),iN=ix('name','company name','company'),
+i1=ix('1m date'),q1=ix('1m qty'),i3=ix('3m date'),q3=ix('3m qty');
+if(iN<0||i1<0||i3<0){if(!quiet)alert('Header must include Name, 1M Date and 3M Date.');return []}
+var out=[];
+rows.slice(1).forEach(function(r){
+var o={type:iT>-1&&/sme/i.test(r[iT])?'SME':'Mainboard',name:(r[iN]||'').trim(),listing:iL>-1?iso(r[iL]):'',d1:iso(r[i1]),q1:q1>-1?num(r[q1]):0,d3:iso(r[i3]),q3:q3>-1?num(r[q3]):0};
+if(o.name)out.push(o)});
+return out}
+function merge(text){var rs=parseRows(text);rs.forEach(function(o){manual=put(manual,o)});saveManual();rebuild();return rs.length}
+var F={};TYPES.forEach(function(t){F[t]={name:'',lf:'',lt:'',d1f:'',d1t:'',m1:'',x1:'',d3f:'',d3t:'',m3:'',x3:'',sort:'listing',dir:-1}});
+var COLS=[['name','Company Name'],['listing','Listing Date'],['d1','LOCK-IN UPTO 1 MONTH'],['q1','QTY'],['d3','LOCK-IN UPTO 3 MONTH'],['q3','QTY']];
+function inRange(v,a,b){if(!a&&!b)return true;if(!v)return false;return (!a||v>=a)&&(!b||v<=b)}
+function inNum(v,mn,mx){var lo=String(mn).trim()===''?null:num(mn),hi=String(mx).trim()===''?null:num(mx);if(lo===null&&hi===null)return true;return (lo===null||v>=lo)&&(hi===null||v<=hi)}
+function rowsFor(t){
+var f=F[t],q=$('q').value.trim().toLowerCase(),hide=$('upc').checked,nm=f.name.trim().toLowerCase();
+var rs=data.filter(function(x){
+if(x.type!=t)return false;
+var n=x.name.toLowerCase();
+if(q&&n.indexOf(q)<0)return false;
+if(nm&&n.indexOf(nm)<0)return false;
+if(hide&&!((x.d1&&days(x.d1)>=0)||(x.d3&&days(x.d3)>=0)))return false;
+return inRange(x.listing,f.lf,f.lt)&&inRange(x.d1,f.d1f,f.d1t)&&inRange(x.d3,f.d3f,f.d3t)&&inNum(x.q1,f.m1,f.x1)&&inNum(x.q3,f.m3,f.x3)});
+var k=f.sort,d=f.dir;
+rs.sort(function(a,b){
+if(k=='name')return d*a.name.localeCompare(b.name);
+if(k=='q1'||k=='q3')return d*((a[k]||0)-(b[k]||0));
+var key=k=='listing'?'listing':k;
+return d*(a[key]||'9999').localeCompare(b[key]||'9999')});
+return rs}
+function dateF(t,a,b){return '<div class="fr"><label>from<input class="fi" type="date" data-t="'+t+'" data-k="'+a+'"></label><label>to<input class="fi" type="date" data-t="'+t+'" data-k="'+b+'"></label></div>'}
+function numF(t,a,b){return '<div class="fr"><input class="fi" type="text" inputmode="numeric" placeholder="min" data-t="'+t+'" data-k="'+a+'"><input class="fi" type="text" inputmode="numeric" placeholder="max" data-t="'+t+'" data-k="'+b+'"></div>'}
+function shell(t){
+var h=COLS.map(function(c){return '<th class="'+(c[0].charAt(0)=='q'?'q ':'')+'s" data-t="'+t+'" data-s="'+c[0]+'">'+c[1]+' <span class="ar" id="ar'+t+c[0]+'"></span></th>'}).join('');
+return '<table><thead><tr>'+h+'</tr><tr class="f"><th><input class="fi" type="text" placeholder="Filter name\u2026" data-t="'+t+'" data-k="name"></th><th>'+dateF(t,'lf','lt')+'</th><th>'+dateF(t,'d1f','d1t')+'</th><th>'+numF(t,'m1','x1')+'</th><th>'+dateF(t,'d3f','d3t')+'</th><th>'+numF(t,'m3','x3')+'</th></tr></thead><tbody id="body'+t+'"></tbody></table>'}
+function render(){
+TYPES.forEach(function(t){
+var rs=rowsFor(t),b=$('body'+t),soon=0,f=F[t];b.innerHTML='';
+rs.forEach(function(x){
+[x.d1,x.d3].forEach(function(d){if(d){var n=days(d);if(n>=0&&n<=7)soon++}});
+var tr=document.createElement('tr');
+tr.innerHTML='<td class="n"></td><td>'+fmt(x.listing)+'</td><td class="d '+cls(x.d1)+'">'+fmt(x.d1)+'</td><td class="q">'+qty(x.q1)+'</td><td class="d '+cls(x.d3)+'">'+fmt(x.d3)+'</td><td class="q">'+qty(x.q3)+'</td>';
+tr.firstChild.textContent=x.name;b.appendChild(tr)});
+$('empty'+t).textContent=loaded?'No rows match.':'Loading\u2026';$('empty'+t).style.display=rs.length?'none':'block';
+$('stat'+t).textContent=rs.length+' shown \u00b7 '+soon+' unlock(s) in next 7 days';
+$('c'+t).textContent=data.filter(function(x){return x.type==t}).length;
+COLS.forEach(function(c){$('ar'+t+c[0]).textContent=f.sort==c[0]?(f.dir>0?'\u25b2':'\u25bc'):'\u2195'})})}
+TYPES.forEach(function(t){$('tbl'+t).innerHTML=shell(t)});
+document.addEventListener('input',function(e){var el=e.target,t=el.getAttribute&&el.getAttribute('data-t'),k=el.getAttribute&&el.getAttribute('data-k');if(t&&k){F[t][k]=el.value;render()}});
+document.addEventListener('click',function(e){var th=e.target.closest&&e.target.closest('th[data-s]');if(!th)return;var t=th.getAttribute('data-t'),k=th.getAttribute('data-s'),f=F[t];if(f.sort==k)f.dir=-f.dir;else{f.sort=k;f.dir=k=='name'?1:-1}render()});
+Array.prototype.forEach.call(document.querySelectorAll('[data-clear]'),function(btn){btn.onclick=function(){var t=btn.getAttribute('data-clear');Object.keys(F[t]).forEach(function(k){if(k!='sort'&&k!='dir')F[t][k]=''});Array.prototype.forEach.call(document.querySelectorAll('input[data-t="'+t+'"]'),function(i){i.value=''});render()}});
+$('q').oninput=render;$('upc').onchange=render;
+$('mergeBtn').onclick=function(){var n=merge($('csv').value);if(n){$('csv').value='';render();alert(n+' row(s) merged.')}};
+$('resetBtn').onclick=function(){if(confirm('Remove the rows you added by hand? Only the auto-updated data will remain.')){manual=[];saveManual();rebuild();render()}};
+Array.prototype.forEach.call(document.querySelectorAll('[data-copy]'),function(btn){
+btn.onclick=function(){var t=btn.getAttribute('data-copy');
+var txt='Company Name\tListing Date\tLOCK-IN UPTO 1 MONTH\tQTY\tLOCK-IN UPTO 3 MONTH\tQTY\n'+rowsFor(t).map(function(x){return [x.name,fmt(x.listing),fmt(x.d1),x.q1,fmt(x.d3),x.q3].join('\t')}).join('\n');
+var ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();
+var ok=false;try{ok=document.execCommand('copy')}catch(e){}
+document.body.removeChild(ta);btn.textContent=ok?'Copied':'Copy failed';setTimeout(function(){btn.textContent='Copy table'},1500)}});
+load();
+})();
+</script>
+</body>
+</html>

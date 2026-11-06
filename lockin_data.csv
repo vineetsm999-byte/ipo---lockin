@@ -1,22 +1,26 @@
 Type,Listing Date,Name,1M Date,1M Qty,3M Date,3M Qty
+SME,2026-11-06,HGS (India) Ltd.,2026-12-03,406800,2027-02-01,406800
+SME,2026-11-06,Johnsoncab Electricals Ltd.,2026-12-05,397500,2027-02-03,397500
+SME,2026-11-06,Maxwell Engineering Solutions Ltd.,2026-12-03,512000,2027-02-01,512000
+SME,2026-11-06,Vectras Enprocon Ltd.,2026-12-04,719400,2027-02-02,719400
 Mainboard,2026-11-05,Bombay Coated & Special Steels Ltd.,2026-12-02,3298750,2027-01-31,3298750
 SME,2026-11-04,Carver Roboweld Ltd.,2026-12-01,498400,2027-01-30,498400
 Mainboard,2026-11-04,M.K.Sons Fine Jewels Ltd.,2026-12-01,2550000,2027-01-30,2550000
-Mainboard,2026-11-03,BLS Polymers Ltd.,2027-01-27,2550000,,
-Mainboard,2026-11-03,SFC Environmental Technologies Ltd.,2027-01-27,3034230,,
+Mainboard,2026-11-03,BLS Polymers Ltd.,2026-11-28,2550000,2027-01-27,2550000
+Mainboard,2026-11-03,SFC Environmental Technologies Ltd.,2026-11-28,3034230,2027-01-27,3034230
 SME,2026-11-03,Wiscon Industries Ltd.,2026-11-30,612900,2027-01-29,612900
-Mainboard,2026-11-02,EAAA India Alternatives Ltd.,2027-01-26,1081080,,
+Mainboard,2026-11-02,EAAA India Alternatives Ltd.,2026-11-27,1081081,2027-01-26,1081080
 SME,2026-10-30,Core4 Engineers Ltd.,2026-11-26,772200,2027-01-25,772200
-Mainboard,2026-10-28,Jio Platforms Ltd.,2027-01-23,36237033,,
-Mainboard,2026-10-28,Paras Healthcare Ltd.,2027-01-23,4707792,,
-Mainboard,2026-10-23,Bonfiglioli Transmissions Ltd.,2027-01-18,6478356,,
-Mainboard,2026-10-23,Sahajanand Medical Technologies Ltd.,2027-01-18,2035817,,
+Mainboard,2026-10-28,Jio Platforms Ltd.,2026-11-24,36237033,2027-01-23,36237033
+Mainboard,2026-10-28,Paras Healthcare Ltd.,2026-11-24,4707792,2027-01-23,4707792
+Mainboard,2026-10-23,Bonfiglioli Transmissions Ltd.,2026-11-19,6478356,2027-01-18,6478356
+Mainboard,2026-10-23,Sahajanand Medical Technologies Ltd.,2026-11-19,2035817,2027-01-18,2035817
 SME,2026-10-23,Shellz India Ltd.,2026-11-19,452400,2027-01-18,452400
-Mainboard,2026-10-23,Tonbo Imaging India Ltd.,2027-01-18,1824006,,
-Mainboard,2026-10-23,Zetwerk Manufacturing Business Ltd.,2027-01-18,74544110,,
-Mainboard,2026-10-22,Fusion CX Ltd.,2027-01-16,5465397,,
+Mainboard,2026-10-23,Tonbo Imaging India Ltd.,2026-11-19,1824007,2027-01-18,1824006
+Mainboard,2026-10-23,Zetwerk Manufacturing Business Ltd.,2026-11-19,74544110,2027-01-18,74544110
+Mainboard,2026-10-22,Fusion CX Ltd.,2026-11-17,5465398,2027-01-16,5465397
 SME,2026-10-22,Ravita Engineering Services Ltd.,2026-11-17,1474200,2027-01-16,1474200
-Mainboard,2026-10-21,HD Fire Protect Ltd.,2027-01-13,3932004,,
+Mainboard,2026-10-21,HD Fire Protect Ltd.,2026-11-14,3932004,2027-01-13,3932004
 SME,2026-10-21,Vaibhav Vyapaar Ltd.,2026-11-14,1100000,2027-01-13,1100000
 SME,2026-10-09,Acme India Industries Ltd.,2026-11-05,882900,2027-01-04,882900
 SME,2026-10-09,TNA Solutions Ltd.,2026-11-07,768000,2027-01-06,768000
@@ -25,33 +29,33 @@ SME,2026-10-08,Shree TNB Polymers Ltd.,2026-11-04,853000,2027-01-03,853000
 SME,2026-10-07,Black Opal Consultants Ltd.,2026-11-04,398100,2027-01-04,398100
 SME,2026-10-07,Vans Electroengineerings Ltd.,2026-11-03,402000,2027-01-02,402000
 SME,2026-10-06,Acme Universal Safezone 9 Ltd.,2026-11-01,719200,2026-12-31,719200
-Mainboard,2026-10-06,SRIT India Ltd.,2026-12-29,2520000,,
-Mainboard,2026-10-06,Shah Investor's Home Ltd.,2026-12-29,809880,,
-Mainboard,2026-10-05,Acevector Ltd.,2026-12-28,29531250,,
+Mainboard,2026-10-06,SRIT India Ltd.,2026-10-30,2520000,2026-12-29,2520000
+Mainboard,2026-10-06,Shah Investor's Home Ltd.,2026-10-30,809880,2026-12-29,809880
+Mainboard,2026-10-05,Acevector Ltd.,2026-10-29,29531250,2026-12-28,29531250
 SME,2026-10-05,Bench Mark Infotech Services Ltd.,2026-10-29,548400,2026-12-28,548400
-Mainboard,2026-10-05,German Green Steel & Power Ltd.,2026-12-28,3279495,,
+Mainboard,2026-10-05,German Green Steel & Power Ltd.,2026-10-29,3279496,2026-12-28,3279495
 SME,2026-10-05,Himalayan Solar Ltd.,2026-10-30,376200,2026-12-29,376200
-Mainboard,2026-10-05,Orient Cables (India) Ltd.,2026-12-28,3044116,,
-Mainboard,2026-10-05,Runwal Enterprises Ltd.,2026-12-28,2441802,,
+Mainboard,2026-10-05,Orient Cables (India) Ltd.,2026-10-29,3044117,2026-12-28,3044116
+Mainboard,2026-10-05,Runwal Enterprises Ltd.,2026-10-29,2441803,2026-12-28,2441802
 SME,2026-10-05,Sai Urja Indo Ventures Ltd.,2026-10-31,293400,2026-12-30,293400
-Mainboard,2026-10-01,A-One Steels India Ltd.,2026-12-27,1492580,,
-Mainboard,2026-10-01,Moneyview Ltd.,2026-12-27,48162364,,
+Mainboard,2026-10-01,A-One Steels India Ltd.,2026-10-28,1492580,2026-12-27,1492580
+Mainboard,2026-10-01,Moneyview Ltd.,2026-10-28,48162365,2026-12-27,48162364
 SME,2026-10-01,Roopa Screen Ltd.,2026-10-28,416000,2026-12-27,416000
-Mainboard,2026-09-30,Adroit Industries (India) Ltd.,2026-12-26,1687050,,
-Mainboard,2026-09-30,ArMee Infotech Ltd.,2026-12-27,532500,,
-Mainboard,2026-09-30,Elevate Campuses Ltd.,2026-12-26,13052486,,
+Mainboard,2026-09-30,Adroit Industries (India) Ltd.,2026-10-27,1687050,2026-12-26,1687050
+Mainboard,2026-09-30,ArMee Infotech Ltd.,2026-10-28,532500,2026-12-27,532500
+Mainboard,2026-09-30,Elevate Campuses Ltd.,2026-10-27,13052486,2026-12-26,13052486
 SME,2026-09-30,Pooja Logistics Ltd.,2026-10-28,531000,2026-12-27,531000
 SME,2026-09-30,S.K.Offset Ltd.,2026-10-29,270000,2026-12-28,270000
-Mainboard,2026-09-30,Swastika Infra Ltd.,2026-12-26,1304391,,
+Mainboard,2026-09-30,Swastika Infra Ltd.,2026-10-27,1304391,2026-12-26,1304391
 SME,2026-09-30,Unitec Fibres Ltd.,2026-10-28,553600,2026-12-27,553600
 SME,2026-09-29,Himalaya Nutravedics India Ltd.,2026-10-24,355200,2026-12-23,355200
-Mainboard,2026-09-29,Varmora Granito Ltd.,2026-12-23,7175887,,
+Mainboard,2026-09-29,Varmora Granito Ltd.,2026-10-24,7175888,2026-12-23,7175887
 SME,2026-09-28,FX Multitech Ltd.,2026-10-23,551400,2026-12-23,551400
 SME,2026-09-28,Robokidz Eduventures Ltd.,2026-10-25,414000,2026-12-24,414000
 SME,2026-09-28,Vivekanand Cotspin Ltd.,2026-10-24,850500,2026-12-24,850500
 SME,2026-09-25,Axiom Gas Engineering Ltd.,2026-10-23,535000,2026-12-22,535000
 SME,2026-09-24,Kheria Autocomp Ltd.,2026-10-22,655200,2026-12-21,655200
-Mainboard,2026-09-24,National Stock Exchange of India Ltd.,2026-12-20,18896869,,
+Mainboard,2026-09-24,National Stock Exchange of India Ltd.,2026-10-21,18896870,2026-12-20,18896869
 Mainboard,2026-09-24,Sonaselection India Ltd.,2026-12-20,2145000,,
 SME,2026-09-24,SpectraA Technology Solutions Ltd.,2026-10-22,512400,2026-12-21,512400
 Mainboard,2026-09-23,Hero Motors Ltd.,2026-12-19,17857142,,
@@ -62,10 +66,10 @@ SME,2026-09-21,Century Business Media Ltd.,2026-10-16,327200,2026-12-15,327200
 SME,2026-09-21,Injecto Polymers Ltd.,2026-10-16,478800,2026-12-15,478800
 Mainboard,2026-09-21,Manika Plastech Ltd.,2026-12-15,4377906,,
 SME,2026-09-18,Maharaja & Speedex India Ltd.,2026-10-17,613500,2026-12-16,613500
-SME,2026-09-18,Om Galaxy Ltd.,2026-10-16,1660800,2026-12-15,1660800
-SME,2026-09-18,Raksan Transformers Ltd.,2026-10-16,785000,2026-12-15,785000
+SME,2026-09-18,Om Galaxy Ltd.,2026-12-15,1660800,,
+SME,2026-09-18,Raksan Transformers Ltd.,2026-12-15,785000,,
 Mainboard,2026-09-18,Veegaland Developers Ltd.,2026-12-15,2250000,,
-SME,2026-09-17,Amtech Esters Ltd.,2026-10-15,338400,2026-12-14,338400
+SME,2026-09-17,Amtech Esters Ltd.,2026-12-14,338400,,
 Mainboard,2026-09-17,Asset Reconstruction Co.(India) Ltd.,2026-12-13,7909791,,
 Mainboard,2026-09-17,Karamtara Engineering Ltd.,2026-12-13,5167322,,
 Mainboard,2026-09-17,LCC Projects Ltd.,2026-12-14,4388434,,
@@ -76,7 +80,7 @@ Mainboard,2026-09-16,Glass Wall Systems (India) Ltd.,2026-12-09,3526563,,
 Mainboard,2026-09-16,Kanohar Electricals Ltd.,2026-12-09,2505712,,
 Mainboard,2026-09-16,Prasol Chemicals Ltd.,2026-12-09,1109465,,
 Mainboard,2026-09-15,Pranav Constructions Ltd.,2026-12-08,3397017,,
-SME,2026-09-11,Qualiance International Ltd.,2026-10-08,504500,2026-12-07,504500
+SME,2026-09-11,Qualiance International Ltd.,2026-12-07,504500,,
 Mainboard,2026-09-08,Deepa Jewellers Ltd.,2026-12-02,3895894,,
 Mainboard,2026-09-08,Rays of Belief Ltd.,2026-12-02,1046095,,
 SME,2026-09-07,Ashutosh Fibre Ltd.,2026-12-01,871800,,
@@ -88,48 +92,48 @@ Mainboard,2026-09-04,ESDS Software Solution Ltd.,2026-12-01,2517482,,
 SME,2026-09-04,Paluck Technologies Ltd.,2026-11-30,978000,,
 Mainboard,2026-09-04,Priority Jewels Ltd.,2026-12-01,686250,,
 SME,2026-09-03,Kwick Forensic Solutions Ltd.,2026-11-29,801600,,
-Mainboard,2026-09-03,Lumino Industries Ltd.,2026-10-01,12621951,2026-11-30,12621950
+Mainboard,2026-09-03,Lumino Industries Ltd.,2026-11-30,12621950,,
 SME,2026-09-02,Sumax Engineering Ltd.,2026-11-29,717600,,
-Mainboard,2026-09-01,Hy-Tech Engineers Ltd.,2026-09-26,3841530,2026-11-25,3841530
+Mainboard,2026-09-01,Hy-Tech Engineers Ltd.,2026-11-25,3841530,,
 SME,2026-09-01,Madhur Knit Crafts Ltd.,2026-11-26,151200,,
-Mainboard,2026-09-01,Skyways Air Services Ltd.,2026-09-26,6324000,2026-11-25,6324000
-Mainboard,2026-09-01,Symbiotec Pharmalab Ltd.,2026-09-26,2662955,2026-11-25,2662954
-Mainboard,2026-08-31,Augmont Enterprises Ltd.,2026-09-25,1562817,2026-11-24,1562816
-Mainboard,2026-08-28,Tempsens Instruments (India) Ltd.,2026-09-23,3242500,2026-11-22,3242499
-Mainboard,2026-08-26,Gaja Alternative Asset Management Ltd.,2026-09-22,5156250,2026-11-21,5156250
-Mainboard,2026-08-25,Shankesh Jewellers Ltd.,2026-09-19,5922300,2026-11-18,5922300
-Mainboard,2026-08-25,Sunshine Pictures Ltd.,2026-09-19,1175570,2026-11-18,1175570
-Mainboard,2026-08-24,Horizon Industrial Parks Ltd.,2026-09-18,97312500,2026-11-17,97312500
-Mainboard,2026-08-24,Lalithaa Jewellery Mart Ltd.,2026-09-18,12641791,2026-11-17,12641790
+Mainboard,2026-09-01,Skyways Air Services Ltd.,2026-11-25,6324000,,
+Mainboard,2026-09-01,Symbiotec Pharmalab Ltd.,2026-11-25,2662954,,
+Mainboard,2026-08-31,Augmont Enterprises Ltd.,2026-11-24,1562816,,
+Mainboard,2026-08-28,Tempsens Instruments (India) Ltd.,2026-11-22,3242499,,
+Mainboard,2026-08-26,Gaja Alternative Asset Management Ltd.,2026-11-21,5156250,,
+Mainboard,2026-08-25,Shankesh Jewellers Ltd.,2026-11-18,5922300,,
+Mainboard,2026-08-25,Sunshine Pictures Ltd.,2026-11-18,1175570,,
+Mainboard,2026-08-24,Horizon Industrial Parks Ltd.,2026-11-17,97312500,,
+Mainboard,2026-08-24,Lalithaa Jewellery Mart Ltd.,2026-11-17,12641790,,
 SME,2026-08-21,ENS Enterprises Ltd.,2026-11-18,513000,,
 SME,2026-08-21,Technocrats Plasma Systems Ltd.,2026-11-17,657000,,
 SME,2026-08-20,Credent Connect N Care Ltd.,2026-11-16,702000,,
-Mainboard,2026-08-19,Behari Lal Engineering Ltd.,2026-09-15,1587473,2026-11-14,1587473
+Mainboard,2026-08-19,Behari Lal Engineering Ltd.,2026-11-14,1587473,,
 SME,2026-08-19,Pramodini Medicare Ltd.,2026-11-14,680400,,
-Mainboard,2026-08-19,Shiprocket Ltd.,2026-09-15,37495784,2026-11-14,37495784
-Mainboard,2026-08-18,Milky Mist Dairy Food Ltd.,2026-09-12,16617857,2026-11-11,16617856
-Mainboard,2026-08-17,Dhoot Transmission Ltd.,2026-09-11,5271329,2026-11-10,5271328
-Mainboard,2026-08-17,Molbio Diagnostics Ltd.,2026-09-11,1743859,2026-11-10,1743858
-Mainboard,2026-08-14,LEAP India Ltd.,2026-09-10,23384427,2026-11-09,23384427
+Mainboard,2026-08-19,Shiprocket Ltd.,2026-11-14,37495784,,
+Mainboard,2026-08-18,Milky Mist Dairy Food Ltd.,2026-11-11,16617856,,
+Mainboard,2026-08-17,Dhoot Transmission Ltd.,2026-11-10,5271328,,
+Mainboard,2026-08-17,Molbio Diagnostics Ltd.,2026-11-10,1743858,,
+Mainboard,2026-08-14,LEAP India Ltd.,2026-11-09,23384427,,
 SME,2026-08-14,Optimystix Entertainment India Ltd.,2026-11-10,835200,,
-Mainboard,2026-08-14,Technocraft Ventures Ltd.,2026-09-10,1781905,2026-11-09,1781905
+Mainboard,2026-08-14,Technocraft Ventures Ltd.,2026-11-09,1781905,,
 SME,2026-08-13,LAPL Automotive Ltd.,2026-11-11,488400,,
-Mainboard,2026-08-12,Ardee Industries Ltd.,2026-09-08,12052792,2026-11-07,12052792
+Mainboard,2026-08-12,Ardee Industries Ltd.,2026-11-07,12052792,,
 SME,2026-08-12,G.V.Electricals Ltd.,2026-11-11,444000,,
 SME,2026-08-11,Aegeus Technologies Ltd.,2026-11-05,286200,,
 SME,2026-08-10,Anawil Wire & Engineering Ltd.,2026-11-03,937800,,
 SME,2026-08-07,Fusion Klassroom Edutech Ltd.,2026-11-04,348400,,
 SME,2026-08-06,Dhaval Packaging Ltd.,2026-11-01,515400,,
-Mainboard,2026-08-06,Juniper Green Energy Ltd.,2026-09-02,11986667,2026-11-01,11986666
-Mainboard,2026-08-06,MV Electrosystems Ltd.,2026-09-02,1535294,2026-11-01,1535293
+Mainboard,2026-08-06,Juniper Green Energy Ltd.,2026-11-01,11986666,,
+Mainboard,2026-08-06,MV Electrosystems Ltd.,2026-11-01,1535293,,
 SME,2026-08-06,Oneindig Technologies Ltd.,2026-11-02,408000,,
 SME,2026-08-05,H.R.Hygiene Products Ltd.,2026-11-01,843200,,
-Mainboard,2026-08-05,Manipal Health Enterprises Ltd.,2026-09-01,35314384,2026-10-31,35314384
+Mainboard,2026-08-05,Manipal Health Enterprises Ltd.,2026-10-31,35314384,,
 SME,2026-08-04,Poojaa Precision Engg.Ltd.,2026-10-28,749800,,
 SME,2026-07-31,Silverstorm Parks & Resorts Ltd.,2026-10-27,826000,,
-Mainboard,2026-07-30,Indo-MIM Ltd.,2026-08-26,11762828,2026-10-25,11762828
-Mainboard,2026-07-30,Lohia Corp Ltd.,2026-08-26,5789567,2026-10-25,5789566
-Mainboard,2026-07-30,Xtranet Technologies Ltd.,2026-08-28,1970100,2026-10-25,1970100
+Mainboard,2026-07-30,Indo-MIM Ltd.,2026-10-25,11762828,,
+Mainboard,2026-07-30,Lohia Corp Ltd.,2026-10-25,5789566,,
+Mainboard,2026-07-30,Xtranet Technologies Ltd.,2026-10-25,1970100,,
 SME,2026-07-29,Shree Balaji (Mala) Textiles Ltd.,2026-10-25,382000,,
 SME,2026-07-28,Metalic Technoforge Ltd.,2026-10-22,920000,,
 Mainboard,2026-07-24,Caliber Mining & Logistics Ltd.,2026-08-21,1591981,2026-10-20,1591980

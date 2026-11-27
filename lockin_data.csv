@@ -1,4 +1,6 @@
 Type,Listing Date,Name,1M Date,1M Qty,3M Date,3M Qty
+Mainboard,2026-11-27,Mahanadi Coalfields Ltd.,2026-12-25,84384128,2027-02-23,84384127
+SME,2026-11-27,Watrana Rentals Ltd.,2026-12-25,693000,2027-02-23,693000
 Mainboard,2026-11-26,Crystal Crop Protection Ltd.,2026-12-22,2499354,2027-02-20,2499354
 SME,2026-11-06,HGS (India) Ltd.,2026-12-03,406800,2027-02-01,406800
 SME,2026-11-06,Johnsoncab Electricals Ltd.,2026-12-05,397500,2027-02-03,397500
@@ -63,8 +65,8 @@ Mainboard,2026-09-23,Hero Motors Ltd.,2026-12-19,17857142,,
 Mainboard,2026-09-23,Jindal Supreme (India) Ltd.,2026-12-19,2014200,,
 Mainboard,2026-09-23,SS Retail Ltd.,2026-12-19,1726414,,
 SME,2026-09-22,Shakti Polytarp Ltd.,2026-10-19,411000,2026-12-19,411000
-SME,2026-09-21,Century Business Media Ltd.,2026-10-16,327200,2026-12-15,327200
-SME,2026-09-21,Injecto Polymers Ltd.,2026-10-16,478800,2026-12-15,478800
+SME,2026-09-21,Century Business Media Ltd.,2026-12-15,327200,,
+SME,2026-09-21,Injecto Polymers Ltd.,2026-12-15,478800,,
 Mainboard,2026-09-21,Manika Plastech Ltd.,2026-12-15,4377906,,
 SME,2026-09-18,Maharaja & Speedex India Ltd.,2026-10-17,613500,2026-12-16,613500
 SME,2026-09-18,Om Galaxy Ltd.,2026-12-15,1660800,,
